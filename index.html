@@ -1,14 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:style="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Welcome to String's Blog</title>
+    <style type="text/css">
+         .top{
+             width:100%;
+             height: auto;
+             margin-left: 0;
+             background:#DC143C;
+             position: fixed; /*固定在顶部*/
+             top: 0;/*离顶部的距离为0*/
+             margin-bottom: 5px;
+         }
+         .top ul
+        {
+           width: auto;
+           list-style-type:none;
+            padding:0;
+            overflow:hidden;
+             margin-left: 22%;
+        }
+        .top li
+        {
+            float:left;
+            margin-right:2%;  /* 两个li之间的距离*/
+        }
+        .top a:link,a:visited
+        {
+            display:block;
+            width:240px;
+            font-weight:bold;
+            color:#FFFFFF;
+            background-color:#DC143C;
+            text-align:center;
+            padding:4px;
+            text-decoration:none;
+            text-transform:uppercase;
+        }
+        .top a:hover,a:active
+        {
+            background-color:#cc0000;
+        }
+
+        #gap{
+            height: 200px;
+        }
+        .content{
+
+            height: 500px;
+            background-color: rgba(255,255,255,0.3);
+        }
+        .container{
+
+            margin-left: 20%;
+            margin-right:20%;
+        }
+         .title{
+           text-align: center;
+             color:white;
+             font-size:2em;
+         }
+         video{
+             margin: 0px;
+             padding: 0px;
+         }
+         video{
+             position: fixed;
+             right: 0px;
+             bottom: 0px;
+
+             height: 100%;
+             width: 100%;
+             /*加滤镜*/
+             /*filter: blur(15px); //背景模糊设置 */
+             /*-webkit-filter: grayscale(100%);*/
+             /*filter:grayscale(100%); //背景灰度设置*/
+             z-index:-11
+         }
+         source{
+
+             height: 50%;
+             width: 50%;
+         }
+    </style>
 </head>
-<frameset  rows = "20%,80%" border="5">
-    <frame src = "top.html" bgcolor="rgb(125,125,0)"></frame>
-<frameset  cols = "30%,70%" border="5">
-    <frame src = "left.html"  name="left"></frame>
-    <frame src = "right.html" name="right"></frame>
-</frameset>
-</frameset>
+
+<body >
+<div class="top">
+    <center>
+<ul >
+    <li><a href="#home">Home</a></li>
+    <li><a href="#articles">Articles</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="Login.html">Login</a></li>
+</ul>
+    </center>
+</div>
+<div id="gap">
+
+</div>
+<video id="v1" autoplay loop muted>
+    <source src="./images/SPACE ENGINE.mp4" type="video/mp4"  />
+</video>
+<div class="container">
+<div class="title">
+<h1  >Welcome To String's Blog</h1>
+</div>
+<div class="content">
+
+</div>
+</div>
+</body>
 </html>
